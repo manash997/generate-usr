@@ -859,6 +859,8 @@ def get_row10():
             sentence_type.append("interrogative")
         elif "|" in wx_output_list:
             sentence_type.append("affirmative")
+        elif "." in wx_output_list:
+            sentence_type.append("affirmative")
         elif "!" in wx_output_list:
             sentence_type.append("exclamatory")
     return sentence_type
