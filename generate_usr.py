@@ -464,11 +464,13 @@ def get_row2():
                 pos_tag=line[1]
                 class_index=int(line[2])
                 word_info=line[3]
+                print("word_info:",word_info)
+                #dependency=
         #main condition check begins here:
         
         if pos_tag=="PSP"  or pos_tag=="SYM" or pos_tag=="CC":
             continue
-        elif pos_tag=="VM": #Do not add suffix for these words because we have to do TAM search on them and it creates a problem later.
+        elif pos_tag=="VM" and word_info=="main": #Do not add suffix for these words because we have to do TAM search on them and it creates a problem later.
             #print("this is the word:",word)
             root_word=get_root_word(word)
             vector_8th=get_8th_vector(word)
