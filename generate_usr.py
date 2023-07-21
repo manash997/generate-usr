@@ -693,7 +693,7 @@ def get_row5(row_2):
                 elif word in line and (line[3]!="NN" or line[3]!="PRP"):
                     gnp_list_temp.append("")'''
             for line in prune_output_list:
-                if word == line.split(",")[1]:
+                if word == line.split(",")[2]:
                     #print("line",line)
                     gender=line.split(",")[3]
                     number=line.split(",")[4]
