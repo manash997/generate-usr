@@ -1,10 +1,13 @@
 
+<<<<<<< HEAD
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 
 
 
 
+=======
+>>>>>>> f40b7b3364596217fcfd45b7da36bbfc0acd86b9
 # Automated USR Generator
 
 This is a project dedicated for generating USRs that will help the models in translating the sentences.
@@ -12,6 +15,7 @@ This is a project dedicated for generating USRs that will help the models in tra
 
 ## Table Of Contents
 
+<<<<<<< HEAD
 1. Introduction
 2. Features
 3. Format of USR
@@ -24,6 +28,13 @@ This is a project dedicated for generating USRs that will help the models in tra
 10. Roadmap
 11. License
 12. Badges
+=======
+1. 
+2. 
+3. 
+4. 
+5. 
+>>>>>>> f40b7b3364596217fcfd45b7da36bbfc0acd86b9
 ## Introduction
 
 Universal Semantic Representation (USR) is a meaning representation that models Indian
@@ -120,7 +131,11 @@ If any error occurred then run the following command:
 			sudo cp ~/usrproginst/utf8_wx .
 			sudo cp ~/usrproginst/ir_no@ .
 
+<<<<<<< HEAD
 6. After running the above commands now, run the following to give the required permissions :-
+=======
+6. After running the above commands now, run the following commands:- 
+>>>>>>> f40b7b3364596217fcfd45b7da36bbfc0acd86b9
 	
             sudo chmod +777 utf8_wx
 	        sudo chmod +777 wx_utf8 
@@ -180,3 +195,14 @@ Generate-USR is released under the MIT License.
 
 [MIT](https://choosealicense.com/licenses/mit/)
 
+<<<<<<< HEAD
+=======
+
+## Badges
+
+
+
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
+
+
+>>>>>>> f40b7b3364596217fcfd45b7da36bbfc0acd86b9
