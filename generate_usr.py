@@ -32,7 +32,7 @@ f=open(prune_file_input,"r",encoding="UTF-8")
 for line in f:
     prune_output_list.append(line.strip())
 f.close()
-#print(prune_output_list)
+#print("pol:",prune_output_list)
 
 #open wx file and append it into a list
 wx_output_list=[]
@@ -293,7 +293,7 @@ def for_handling_nnc_tag_or_pof(word,class_index):
     else:
         used_root_word.add(root_word_class)
         updated_root_word[root_word_class]=root_word+"+"+root_word_class
-    final_word=root_word+"_1"+"+"+root_word_class+"_1"
+    final_word=root_word+"+"+root_word_class+"_1"
     VM_already_visited[class_word]=final_word
     return final_word
 #---------------------------------------------------------------------
@@ -429,11 +429,13 @@ def search_tam_row2(concept_list):
         
     return concept_list
 #----------------------------------------------------------------------
-def pronouns_to_replace(concept_list):
+def pronouns_n_qnwords_to_replace(concept_list):
     concept_list_temp=concept_list
     category_1=["wuma","wumhArA","wumako","wuJe","wU","wuJako","Apa"]
     category_2=["mEM","hama","hamArA","hamako","hameM","muJe","muJako"]
     category_3=["Ji"]
+    category_4=["vaha","yaha"]
+    category_5=["kyA","kOna","kaba","kahAz","kEse","kisase","kEsA","kyoM","kisane","kisako","kisaki","kiwanA","kiwanI","kisaliye"]
     for index in range(len(concept_list_temp)):
         word=concept_list_temp[index]
         if "+" in word:
@@ -445,10 +447,31 @@ def pronouns_to_replace(concept_list):
                 concept_list_temp[index]="speaker"
             elif word in category_3:
                 concept_list_temp[index]="respect"
+            elif word in category_4:
+                concept_list_temp[index]="wyax"
+            elif word in category_5:
+                concept_list_temp[index]="kim"
             else:
                 continue
     return concept_list_temp
 #----------------------------------------------------------------------------------------------------------
+def for_handling_prpc(word,word_index):
+    #print("wi",word_index)
+    line= info_list_final[word_index] #updated simply vaux to vaux root
+    #print("line",line)
+    pos_tag=line[1]
+    if pos_tag=="PRP":
+        word_index=line[0]
+        temp=wx_words_dictionary[word_index]
+        #print("temp",temp)
+        already_visited[temp]=1
+        final_word=root_word_dict_reverse[word]+"+"+root_word_dict_reverse[temp]
+    else:
+        final_word=word
+    return final_word
+
+    
+
 def get_row2():
     #pos_tag_dictionary={}#where key is wx_word and value is pos_tag
     
@@ -464,7 +487,7 @@ def get_row2():
                 pos_tag=line[1]
                 class_index=int(line[2])
                 word_info=line[3]
-                print("word_info:",word_info)
+                #print("word_info:",word_info)
                 #dependency=
         #main condition check begins here:
         
@@ -515,6 +538,10 @@ def get_row2():
                 final_word_temp=final_word.split("+")[0].strip("_1")
                 final_word=final_word_temp+"+"+f_right'''
                 
+            concept_list.append(final_word)
+        elif pos_tag=="PRPC":
+            print("word in use",word)
+            final_word=for_handling_prpc(word,word_index)
             concept_list.append(final_word)
         else:
             if word in already_visited:
@@ -692,12 +719,16 @@ def get_row5(row_2):
             
                 elif word in line and (line[3]!="NN" or line[3]!="PRP"):
                     gnp_list_temp.append("")'''
+            gender="-"
+            number="-"
+            person="-"
             for line in prune_output_list:
                 if word == line.split(",")[2]:
                     #print("line",line)
                     gender=line.split(",")[3]
                     number=line.split(",")[4]
                     person=line.split(",")[5]
+                    #print("gender:",gender)
                     if gender=="unk":
                         gender="-"
                     if number=="unk":
@@ -759,7 +790,7 @@ def get_row6(row_2):
         concepts=concepts.split("_")[0]
         row2_iter.append(concepts)
     #print("iterable:",row2_iter) #iterable after cleaning
-    
+    #print("root_word_dic",root_word_dict)
     for root_word in row2_iter:
         wx_word=root_word_dict.get(root_word)
         #print(wx_word)
@@ -888,7 +919,7 @@ if __name__=="__main__":
         row_2=get_row2()
         #print(row_2)
         row_2_temp=row_2.copy()
-        row_2_chg=pronouns_to_replace(row_2_temp)
+        row_2_chg=pronouns_n_qnwords_to_replace(row_2_temp)
         row_3=get_row3(row_2)
         row_4=get_row4(row_2)
         row_5=get_row5(row_2)
