@@ -161,7 +161,8 @@ If any error occurred then run the following command:
 ## Requirements
 ## Documentation
 
-[Documentation](https://file:///C:/Users/91829/Downloads/Usr%20Program%20Documentation.pdf)
+[Click here to view the Documentation](https://github.com/manash997/generate-usr/blob/main/Documentation_for_generate_usr.python.pdf)
+
 
 
 ## Contributing
