@@ -20,13 +20,6 @@ for line in parser_output_lines:
     parser_output_list.append(line.split())
 
 #Open pruner file and store all its words into a 2d list
-'''prune_output_list=[]
-with open(prune_file_input,"r",encoding="UTF-8") as pf:
-    prune_output_lines=pf.readlines()
-#we append the lines into a list thereby it is 2d list prune_output_list
-for line in prune_output_lines:
-    prune_output_list.append(line.split())'''
-
 prune_output_list=[]
 f=open(prune_file_input,"r",encoding="UTF-8")
 for line in f:
@@ -41,38 +34,13 @@ with open(wx_file_input,"r",encoding="UTF-8") as pf:
     wx_output_list=wx_list[0].split()
 
 #print(wx_output_list)
-#Open Concept dictionary and store it's contents into a list
-'''concept_dictionary_list=[]
-with open(concept_dictionary_input,"r") as cd:
-    for line in cd:
-        concept_real=line.split()
-        #print(concept_real)
-        concept_dictionary_list.append(concept_real)'''
 #---------------------------------------------------------------
 
 #--------------------------------------------------------------------
-#Create a prune output list
-'''prune_output_trimmed_list=[] #Only the prune output part,that we require
-for line in range(len(prune_output_list)):
-    #print(line)
-    if "Pruning" in prune_output_list[line]:
-        prune_len_init=line
-    elif "NER" in prune_output_list[line]:
-        prune_len_final=line
-prune_output_trimmed_list=prune_output_list[prune_len_init+2:prune_len_final-1]'''
 #---------------------------------------------------------------------
 #root word dictionary
 root_word_dict_reverse={} #key==wx_word and value is root_word from prune output
 root_word_dict={} #key=root_word and value is wx_word
-'''for line in range (len(prune_output_trimmed_list)):
-    #wx_word=line[1]
-    wx_word=wx_output_list[line]
-    vm_row_new=prune_output_trimmed_list[line][4]
-    vm_row_split_new=vm_row_new.split(",")
-    root_word_prune=suffix=vm_row_split_new[0][4:]
-    root_word_dict_reverse[wx_word]=root_word_prune
-    if root_word_prune:
-        root_word_dict[root_word_prune]=wx_word'''
 for sent in prune_output_list:
     split_sent=sent.split(",")
     wx_word=split_sent[1]
@@ -92,18 +60,6 @@ for sent in prune_output_list:
 #creating a suffix dictionary where key is word and value is suffix a.k.a 8th vector
 suffix_dictionary={}
 word=str()
-'''for line in prune_output_trimmed_list:
-    #print(line)
-    wx_word=line[1]
-    vm_row_new=line[4]
-    #print(vm_row_new)
-    vm_row_split_new=vm_row_new.split(",")
-    suffix=vm_row_split_new[4]
-
-    #suffix=vm_row_split_new[6][:-2].partition("'")[0]
-    #print(vm_row_split_new)
-    print(suffix)
-    suffix_dictionary[wx_word]=suffix'''
 for sent in prune_output_list:
     split_sent=sent.split(",")
     wx_word=split_sent[1]
@@ -188,21 +144,8 @@ for line in data:
 for line in TAM_dictionary_list:
     line.pop(0)
 
-for line in TAM_dictionary_list:
+#for line in TAM_dictionary_list:
     #print(line)
-    '''matched_tams={}
-real_tam_search="rahawe hEM"
-for line in TAM_dictionary_list:
-    for value in line:
-        if real_tam_search.endswith(value) and  value!="" :
-            #print(line[0],value)
-            #print(line)
-            matched_tams[value]=line[0]
-            break
-print(matched_tams)
-longest_key_temp=0
-for key in matched_tams.keys():
-    longest_key_temp=len(key)'''
 #---------------------------------------------------------------------   
 def search_concept(search_word):
     key=0
@@ -211,7 +154,7 @@ def search_concept(search_word):
             key=1
             break
     if key==0:
-            print("Warning:{} not found in dictionary.".format(search_word))      
+        print("Warning:{} not found in dictionary.".format(search_word))    
 #----------------------------------------------------------------
 #To print 1st row of USR which is the Original Sentence
 def get_row1():
@@ -262,11 +205,6 @@ def for_VM_no__1(row_2):
 
 def get_8th_vector(word):
     vector_8th=suffix_dictionary[word]
-    '''for line in morph_output_list:
-        if word in line:
-            vm_row=line.split()[4]
-            vm_row_split=vm_row.split(",")
-            vector_8th=vm_row_split[7][:-2].partition("'")[0]'''
     return vector_8th
         
 def get_root_word(word):#updated
@@ -327,13 +265,6 @@ def word_search_from_end(search_word):
                 else:
                     if line0_length > len(matched_tams[value]):
                         matched_tams[value]=line[0]
-                
-                #print(line[0],value)
-        #matched_tams[value]=max(match_key_list,key=len)
-        #print(match_key_list)
-            
-                #break
-    #print(matched_tams)
     longest_key=int(0)
     longest_key_value=int(0)
     key_tam=None
@@ -533,14 +464,9 @@ def get_row2():
         elif pos_tag=="NNC" or word_info=="pof":
 
             final_word=for_handling_nnc_tag_or_pof(word,class_index)
-            '''if pos_tag=="NN":
-                f_right=final_word.split("+")[1]
-                final_word_temp=final_word.split("+")[0].strip("_1")
-                final_word=final_word_temp+"+"+f_right'''
-                
             concept_list.append(final_word)
         elif pos_tag=="PRPC":
-            print("word in use",word)
+            #print("word in use",word)
             final_word=for_handling_prpc(word,word_index)
             concept_list.append(final_word)
         else:
@@ -594,75 +520,6 @@ def get_row4(row_2):
             if flag==0:
                 sem_category_list.append("")
     #print(sem_category_list)
-        
-
-
-    #index_value_list=[]
-    '''for vax in range(len(prune_output_lines)):
-        if "NER" in prune_output_lines[vax]:
-            break'''
-    #NER_list=prune_output_lines[vax:-1]
-    #for word in NER_list:
-    #    print(word)
-    '''row_4_temp=[]
-    for concept in row_2:
-        if "+" in concept:
-            row_4_temp.append(",")
-            index_value_list.append(",")
-        elif "-" in concept:
-            row_4_temp.append(",")
-            index_value_list.append(",")
-        else:
-            concept=concept.split("_")[0]
-            original_word=root_word_dict[concept]
-            row_4_temp.append(original_word)
-            index_value_list.append(wx_words_dictionary_new[original_word])
-        #print(row_4_temp)
-        #print(index_value_list)
-    for index in index_value_list:
-        index=str(index)
-        if index==",":
-            sem_category_list.append("")
-        else:
-            flag=0
-            for word in NER_list:
-                if index in word and "location" in word:
-                    sem_category_list.append("loc")
-                    flag=1
-                    break
-                elif index in word and "person" in word:
-                    sem_category_list.append("per")
-                    flag=1
-                    break
-                elif index in word and "organization" in word:
-                    sem_category_list.append("org")
-                    flag=1
-                    break
-            if flag==0:
-                sem_category_list.append("")'''
-    '''for concept in row_2:
-        #print("concept:",concept)
-        if "_1" in concept and "+" not in concept:
-            if "+" in concept:
-                f_word=concept.split("+")[0]
-                s_word=concept.split("+")[1]
-            r_word=concept.strip("_1")
-            ck_word=root_word_dict[r_word]
-            
-
-            if ck_word in NER_dict:
-                print("this is concept:",concept)
-                concept=concept.strip()
-                ner_val=NER_dict[concept]
-                if ner_val=="B-PER":
-                    ner_val="per"
-                elif ner_val=="B-ORG":
-                    ner_val="org"
-                elif ner_val=="B-LOC":
-                    ner_val="loc"
-                sem_category_list.append(ner_val)
-        else:
-            sem_category_list.append(",")'''
     #print("sem_list:",sem_category_list)
 
         
@@ -690,35 +547,6 @@ def get_row5(row_2):
         if word==",":
             gnp_list_temp.append("")
         else:
-            '''for line in prune_output_trimmed_list:
-                if word in line and (line[2]=="NN" or line[2]=="PRP" or line[2]=="NNP" or line[2]=="NNPC"):
-                    af_values=line[4].split(",")
-                    #print(af_values)
-                    gender="-" if af_values[2] is None else af_values[2]
-                    number="-" if af_values[3] is None else af_values[3]
-                    person="-" if af_values[4] is None else af_values[4]
-                    #print(gender)
-                    if (gender=="" or number=="" or person==""):
-                        gnp_list_temp.append("")
-                        break
-                    if gender=="any":
-                        gender="-"
-                    if number=="any":
-                        number="-"
-                    if person=="any":
-                        person="-"
-                    if person=="1":
-                        person="u"
-                    elif person=="2":
-                        person="m"
-                    elif person=="3":
-                        person="a"
-                    
-
-                    gnp_list_temp.append("["+""+gender+" "+number+" "+person+"]")
-            
-                elif word in line and (line[3]!="NN" or line[3]!="PRP"):
-                    gnp_list_temp.append("")'''
             gender="-"
             number="-"
             person="-"
@@ -861,16 +689,6 @@ def get_row6(row_2):
     #for word in row_6:
      #  if "r6-k2" in word:
       #  word.replace("r6-k2","r6")'''
-    '''for inx in range(len(row_6)):
-        if "lwg__neg" in row_6[inx]:
-            word=row_6[inx]
-            init_value=word.split(":")[0]
-            row_6[inx]=init_value+":"+"neg"
-        if "r6-k2" in row_6[inx]:
-            word=row_6[inx]
-            init_value=word.split(":")[0]
-            row_6[inx]=init_value+":"+"k2"'''
-
     return row_6
 #----------------------------------------------------------------------
 #row 7
