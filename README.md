@@ -1,21 +1,9 @@
-
-<<<<<<< HEAD
-
-[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
-
-
-
-
-=======
->>>>>>> f40b7b3364596217fcfd45b7da36bbfc0acd86b9
 # Automated USR Generator
 
 This is a project dedicated for generating USRs that will help the models in translating the sentences.
 
-
 ## Table Of Contents
 
-<<<<<<< HEAD
 1. Introduction
 2. Features
 3. Format of USR
@@ -28,31 +16,24 @@ This is a project dedicated for generating USRs that will help the models in tra
 10. Roadmap
 11. License
 12. Badges
-=======
-1. 
-2. 
-3. 
-4. 
-5. 
->>>>>>> f40b7b3364596217fcfd45b7da36bbfc0acd86b9
+
 ## Introduction
 
 Universal Semantic Representation (USR) is a meaning representation that models Indian
 Grammatical Tradition (IGT). Meaning (or thought) is there in the mind of the speaker (author)
 and (s)he while speaking (writing) makes use of language (or linguistic expressions) to express
-his/her thought. Thus a discourse (text) represents the speaker's thought.
+his/her thought. Thus a discourse (text) represents the speaker's thoughts.
 This guideline is created to help annotators to make USRs of the written discourse. The objective
 is to generate multiple natural languages from these USRs using Natural Language Generators.
 
 ## Features
 
 Generally, the normal process of conversion of sentences from one language to another takes a lot of time of annotators. 
-
-But, now with the help of USR generation it is very easy and convenient for them to annotate the same within less amount of time. Additionally, it is very efficient in all terms and conditions.
+But, now with the help of USR generation, it is very easy and convenient for them to annotate the same within less amount of time. Additionally, it is very efficient in all terms and conditions.
 
 ## Format of USR
 
-The meaning is represented in 11 rows in csv (comma (,) separated value) format. This document
+The meaning is represented in 11 rows in CSV (comma (,) separated value) format. This document
 guides the annotators to annotate each row. The 11 rows are:
 
 	Row 1 Original Sentence
@@ -79,34 +60,32 @@ guides the annotators to annotate each row. The 11 rows are:
 ## Installation
 
 1. Create a virtual environment inside the **"usrproginst"** folder using following commands:
-	
+```javascript
 		cd usrproginst
 		python3 -m venv virtual
 		source virtual/bin/activate
-
-	
+```	
 2. Now, install iscnlp tokenizer, pos-tagger and parser. Please follow the given repository link for the same. 
 		
 		https://bitbucket.org/iscnlp/
 
-
--   First, install the tokenizer, then the pos-tagger and lastly install parser.	
+- First, install the tokenizer, then the pos-tagger and lastly install parser.	
 - Now read the readme given in the repository for all the three (tokenizer, pos-tagger, parser) and run the given commands in terminal.
 
 ### Note: 
 Run first command in home directory itself.
 - Remember to replace python with python3 while running 3rd step of Readme for all 3 i.e tokenizer, pos-tagger,parser i.e sudo python3 setup.py install.
 -  While running 3rd command if you get error related to setup tools then it means pip is not installed in your system and you have to run the following command :-
-        
+              
 		sudo apt install python3-pip
-
+	     
 
 - In pos-tagger and parser,run these dependencies code after installing them with given command:
-	       
-		   $ pip install -r requirements.txt
-
+	     
+		$ pip install -r requirements.txt
+ 	     
 3. Run the following commands on terminal inside parser folder:
-
+ 		
 		sudo apt install python2
 		sudo snap install curl
 		curl https://bootstrap.pypa.io/pip/2.7/get-pip.py --output get-pip.py
@@ -131,13 +110,12 @@ If any error occurred then run the following command:
 			sudo cp ~/usrproginst/utf8_wx .
 			sudo cp ~/usrproginst/ir_no@ .
 
-<<<<<<< HEAD
+
 6. After running the above commands now, run the following to give the required permissions :-
-=======
+
 6. After running the above commands now, run the following commands:- 
->>>>>>> f40b7b3364596217fcfd45b7da36bbfc0acd86b9
-	
-            sudo chmod +777 utf8_wx
+
+                sudo chmod +777 utf8_wx
 	        sudo chmod +777 wx_utf8 
 	        sudo chmod +777 ir_no@	
 
@@ -159,10 +137,6 @@ If any error occurred then run the following command:
 
 
 ## Requirements
-## Documentation
-
-[Documentation](https://file:///C:/Users/91829/Downloads/Usr%20Program%20Documentation.pdf)
-
 
 ## Contributing
 
@@ -191,18 +165,15 @@ picture...
 
 ## License
 
-Generate-USR is released under the MIT License. 
-
-[MIT](https://choosealicense.com/licenses/mit/)
-
-<<<<<<< HEAD
-=======
-
-## Badges
-
-
-
+Generate-USR is released under the MIT License.
+</a>
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 
 
->>>>>>> f40b7b3364596217fcfd45b7da36bbfc0acd86b9
+## Badges
+<a href="https://github.com/manash997/generate-usr/stargazers"><img src="https://img.shields.io/github/stars/manash997/generate-usr" alt="Stars Badge"/></a>
+<a href="https://github.com/manash997/generate-usr/forks"><img src="https://img.shields.io/github/forks/manash997/generate-usr" alt="Forks Badge"/></a>
+<a href="https://github.com/manash997/generate-usr/pulls"><img src="https://img.shields.io/github/issues-pr/manash997/generate-usr" alt="Pull Requests Badge"/></a>
+<a href="https://github.com/manash997/generate-usr/issues"><img src="https://img.shields.io/github/issues/manash997/generate-usr" alt="Issues Badge"/></a>
+<a href="https://github.com/manash997/generate-usr/graphs/contributors"><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/manash997/generate-usr?color=2b9348"></a>
+
