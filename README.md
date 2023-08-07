@@ -1,35 +1,42 @@
-# Automated USR Generator
+<a href="https://github.com/manash997/generate-usr/stargazers"><img src="https://img.shields.io/github/stars/manash997/generate-usr" alt="Stars Badge"/></a>
+<a href="https://github.com/manash997/generate-usr/forks"><img src="https://img.shields.io/github/forks/manash997/generate-usr" alt="Forks Badge"/></a>
+<a href="https://github.com/manash997/generate-usr/pulls"><img src="https://img.shields.io/github/issues-pr/manash997/generate-usr" alt="Pull Requests Badge"/></a>
+<a href="https://github.com/manash997/generate-usr/issues"><img src="https://img.shields.io/github/issues/manash997/generate-usr" alt="Issues Badge"/></a>
+<a href="https://github.com/manash997/generate-usr/graphs/contributors"><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/manash997/generate-usr?color=2b9348"></a>
+
+## Automated USR Generator
 
 This is a project dedicated for generating USRs that will help the models in translating the sentences.
 
 ## Table Of Contents
 
 1. Introduction
-2. Features
-3. Format of USR
-4. Installation
-5. Usage/Examples
-6. Requirements
-7. Documentation
-8. Contributing
-9. Screenshots
-10. Roadmap
-11. License
-12. Badges
+2. Format of USR
+3. Installation
+4. Usage/Examples
+5. Requirements
+6. Documentation
+7. Contributing
+8. Screenshots
+9. License
 
 ## Introduction
 
-Universal Semantic Representation (USR) is a meaning representation that models Indian
-Grammatical Tradition (IGT). Meaning (or thought) is there in the mind of the speaker (author)
-and (s)he while speaking (writing) makes use of language (or linguistic expressions) to express
-his/her thought. Thus a discourse (text) represents the speaker's thoughts.
-This guideline is created to help annotators to make USRs of the written discourse. The objective
-is to generate multiple natural languages from these USRs using Natural Language Generators.
+Welcome to Automated USR Generator, an innovative open-source project developed in Python. This powerful tool is designed to effortlessly generate USRs (Universal Sentence Representations) from any input sentence or a bulk of sentences. USRs play a pivotal role in natural language processing and understanding, enabling various downstream tasks such as sentiment analysis, text classification, and machine translation.
 
-## Features
+The project leverages several essential modules to achieve its functionality. First, we have the "pos tagger and parser" module, which is utilized effectively to parse the input sentences and extract their syntactic dependencies as well as extract pos tags. This ensures that the subsequent processing steps have access to the correct linguistic structure.
 
-Generally, the normal process of conversion of sentences from one language to another takes a lot of time of annotators. 
-But, now with the help of USR generation, it is very easy and convenient for them to annotate the same within less amount of time. Additionally, it is very efficient in all terms and conditions.
+Next up is the "wx" module, which is employed by the "wx" component. This step takes the input in UTF-8 format and then converts it into wx_format.
+
+The "morph_call_1.py" module comes into play with the "morph" component. This stage focuses on deriving and separating root_word, GNP(Gender, Number, Person) and TAM(Tense, Aspect, Modality) from the given input sentence.	
+
+After morphological analysis, the "converter.py" module is there which takes output from apertium.morph and convert it into csv format which will be easy to process.
+
+Furthermore, the "ner_call.py" module is employed for  Named Entity Recognition (NER). This process identifies entities such as names of people, organizations, locations, etc., and enriches the sentence representation with this valuable contextual information.
+
+Finally, the heart of the USR generation process lies in the "generate_usr.py" module. This module orchestrates all the preceding steps, combining the output from the parser, wx, morph, prune, and NER components to create comprehensive and effective Universal Sentence Representations.
+
+Whether you need to process a single sentence or analyze a large dataset of sentences, Automated USR Generator provides a simple yet powerful interface to cater to your needs. The project's open-source nature encourages contributions and collaboration from the community, fostering continuous improvement and expanding its capabilities.
 
 ## Format of USR
 
@@ -57,6 +64,7 @@ guides the annotators to annotate each row. The 11 rows are:
 	Row 10 Sentence Type
 	
 	Row 11 Construction
+ 
 ## Installation
 
 1. Create a virtual environment inside the **"usrproginst"** folder using following commands:
@@ -142,23 +150,35 @@ functional_diagram
 
 [Click here to view the Documentation](https://github.com/manash997/generate-usr/blob/main/Documentation_for_generate_usr.python.pdf)
 
-
-=======
-
- main
-
 ## Contributing
 
-Contributions are always welcome!
+#### Contributions are always welcome! 
 
-If you find any bugs or have suggestions for improvements, please open an issue or submit a pull request.
+Follow the given steps for contributing to this project:-
 
-- Fork the repository.
-- Create your feature branch (git checkout -b feature/YourFeature).
-- Commit your changes (git commit -m 'Add some feature').
-- Push to the branch (git push origin feature/YourFeature).
-- Open a pull request.
+- Fork the repository on GitHub.
 
+- Clone the forked repository to your local machine using git clone.
+
+- Create a new branch for your contribution using git checkout -b <branch-name>. Choose a meaningful name that describes your changes.
+
+- Make the necessary changes and improvements to the codebase.
+
+- Before committing your changes, ensure that your code follows our coding standards and guidelines.
+
+- Test your changes thoroughly to ensure they work as intended.
+
+- Commit your changes with a descriptive commit message using git commit.
+
+- Push the changes to your forked repository with git push origin <branch-name>.
+
+- Go to the original repository on GitHub and create a Pull Request (PR) from your forked repository.
+
+- Provide a clear and descriptive title for your PR, summarizing the changes you've made.
+
+By following these guidelines, you can contribute to our open-source project effectively and help make it even better! 
+
+Thank you for your contributions and support.
 
 ## Screenshots
 
@@ -170,19 +190,10 @@ picture...
 - Class Diagrams
 - we can include the following things into it.
 
-
-
 ## License
 
 Generate-USR is released under the MIT License.
 </a>
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 
-
-## Badges
-<a href="https://github.com/manash997/generate-usr/stargazers"><img src="https://img.shields.io/github/stars/manash997/generate-usr" alt="Stars Badge"/></a>
-<a href="https://github.com/manash997/generate-usr/forks"><img src="https://img.shields.io/github/forks/manash997/generate-usr" alt="Forks Badge"/></a>
-<a href="https://github.com/manash997/generate-usr/pulls"><img src="https://img.shields.io/github/issues-pr/manash997/generate-usr" alt="Pull Requests Badge"/></a>
-<a href="https://github.com/manash997/generate-usr/issues"><img src="https://img.shields.io/github/issues/manash997/generate-usr" alt="Issues Badge"/></a>
-<a href="https://github.com/manash997/generate-usr/graphs/contributors"><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/manash997/generate-usr?color=2b9348"></a>
 
