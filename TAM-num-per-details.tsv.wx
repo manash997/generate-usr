@@ -1,0 +1,56 @@
+TAM WX	TAM Devanagari	anyapu. eka. puMlifga	anyapu. eka. swrI.	anyapu. bahu. puMlifga	anyapu. bahu. swrI.	maXyamapu. eka. puMlifga	maXyamapu. eka. swrI.	maXyamapu. bahu. puMlifga	ma. pu. bahu. swrI.	uwwamapu. eka. puMlifga	uwwamapu. eka. swrI.	uwwamapu. bahu. puMlifga	uwwamapu. bahu. swrI.
+wA_hE_1	wA_hE_1	wA hE	wI hE	we hEM	wI hEM	we ho	wI ho	we ho	wI ho	wA hUz	wI hUz	we hEM	wI hEM
+0_rahA_hE_1	0_rahA_hE_1	rahA hE	rahI hE	rahe hEM	rahI hEM	rahe ho	rahI ho	rahe ho	rahI ho	rahA hUz	rahI hUz	rahe hEM	rahI hEM
+0_sakawA_hE_1	0_sakawA_hE_1	sakawA hE	sakawI hE	sakawe hEM	sakawI hEM	sakawe ho	sakawI ho	sakawe ho	sakawI ho	sakawA hUz	sakawI hUz	sakawe hEM	sakawI hEM
+0_sakawA_WA_1	0_sakawA_WA_1	sakawA WA	sakawI WI	sakawe WeM	sakawI WIM	sakawe We	sakawI WI	sakawe WeM	sakawI WIM	sakawA WA	sakawI WI	sakawe WeM	sakawI WIM
+0_sakawA_hE_2	0_sakawA_hE_2	sakawA hE	sakawI hE	sakawe hEM	sakawI hEM	sakawe ho	sakawI ho	sakawe ho	sakawI ho	sakawA hUz	sakawI hUz	sakawe hEM	sakawI hEM
+0_sakawA_1	0_sakawA_1	sakawA hE	sakawI hE	sakawe hEM	sakawI hEM	sakawe ho	sakawI ho	sakawe ho	sakawI ho	sakawA hUz	sakawI hUz	sakawe hEM	sakawI hEM
+state_copula-pres	0_hE_1	hE	hE     	hEM	hE	ho	ho	ho	ho	hUz	hUz	hEM	hEM
+yA_1	yA_1	yA	yI	yeM	yIM	ye	yI	yeM	yIM	yA	yI	yeM	yIM
+yA_1	yA_1	A	I	e	IM	e	I	e	IM	A	I	e	IM
+gA_1	gA_1	gA	gI	geM	gIM	ge	gI	geM	gIM	gA	gI	geM	gIM
+0_rahA_WA_1	0_rahA_WA_1	rahA WA	rahI WI	rahe  WeM	rahI WIM	rahe We	rahI WI	rahe WeM	rahI WIM	rahA WA	rahI WI	raheM WeM	rahIM WIM
+yA_gayA_WA_1	yA_gayA_WA_1	yA gayA WA	yA gayI WI	yA gaye WeM	yA gayI WIM	yA gaye We	yA gayI WI	yA gaye WeM	yA gayI WIM	yA gayA WA	yA gayI WI	yA gayeM WeM	gayIM
+yA_gayA_WA_2	yA_gayA_WA_2	yA gayA WA	yA gayI WI	yA gaye WeM	yA gayI WIM	yA gaye We	yA gayI WI	yA gaye WeM	yA gayI WIM	yA gayA WA	yA gayI WI	yA gayeM WeM	yA gayIM WIM
+yA_gayA_1	yA_gayA_1	yA gayA	yA gayI	yA gaye	yA gayIM	yA gaye	yA gayI	yA gayeM	yA gayIM	yA gayA	yA gayI	yA gayeM	yA gayIM
+yA_gayA_hE_1	yA_gayA_hE_1	gayA hE	 gaI hE	gae hEM	 gaI hE	 gae ho	 gaI ho	 gae ho	 gaI ho	 gayA hUM	 gaI hUM	 gae hEM	 gaI hE
+yA_gayA_hE_2	yA_gayA_hE_2	 gayA hE	 gaI hE	 gae hEM	 gaI hE	 gae ho	 gaI ho	 gae ho	 gaI ho	 gayA hUM	gaI hUM	 gae hEM	 gaI hE
+yA_hE_1	yA_hE_1	 yA hE	ye hE	  ye hE	 ye hEM	yA ho	ye ho	yA ho	ye ho	yA hUz	 ye hUM	 yA hEM	yA hE
+wA_huA_1	wA_huA_1	wA huA	 wA huI	 we huA	we huA	wA huo	we huo	wA huo	we huI	 wA hue	we hue	wA huA	wA huE
+0_liyA_hogA_1	0_liyA_hogA_1	liyA hogA	liyA hogI	liyA hoge	liyA hogI	liyA hogA	liyA hogI	liyA hoge	liyA hogA	liyA hogA	liyA hogI	liyA hogA	liyA hoge
+past	past												
+wA_WA_1	wA_WA_1	wA WA	  wA WI	we We	wI WIM	we We	  wA WI	wA We	wI WIM	wA WA	wI WI	wA WA	we WIM
+0_jAwA_WA_1	0_jAwA_WA_1	jAwA WA	jAwI WI	jAwe We	jAwI WIM	jAwe We	jAwI WI	jAwe WeM	jAwI WIM	jAwA WA	jAwI WI	jAwA WA	jAwe WeM
+#wA_WA_1	#wA_WA_1												
+pres	pres												
+AI_xI_1	AI_xI_1												
+0_liyA_1	0_liyA_1	liyA	liyI	liye	liyI	liye	liyI	liye	liyI	liyA	liyI	liyeM	liyI
+0_gayA_1	0_gayA_1	gayA	gayI	gaye	gayI	gaye	gayI	gaye	gayI	gayA	gayI	gayeM	gayI
+0_gayA_WA_1	0_gayA_WA_1	 gayA WA	 gaI WI	 gae We	  gaI WI	 gae We	 gaI WI	 gae We	 gaI WI	 gayA WA	 gaI WI	 gae We	  gaI WI
+nA_cAhawA_hE_1	nA_cAhawA_hE_1	nA cAhawA hE	nA cAhawi hE	nA cAhawe hE	nA cAhawI hEM	nA cAhawe ho	nA cAhawI ho	nA cAhawe ho	nA cAhawI ho	nA cAhawA hUz	nA cAhawI hUz	nA cAhawe hEM	nA cAhawI hEM
+hE_nahIM_1	hE_nahIM_1	hE nahIM	hE nahIM	hE nahIM	hE nahIM	hE nahIM	hE nahIM	hE nahIM	hE nahIM	hE nahIM	hE nahIM	hE nahIM	hE nahIM
+yA_nahIM_1	yA_nahIM_1	yA nahIM	yI nahIM	ye nahIM	yI nahIM	yA nahIM	yA nahIM	yA nahIM	yI nahIM	yA nahIM	yI nahIM	yA nahIM	yI nahIM
+yA_WA_nahIM_1	yA_WA_nahIM_1	yA WA nahIM	yI WI nahIM 1	ye We nahIM 1	yI WI nahIM	ye We nahIM	yI WI nahI	yA We nahIM	yA WIM nahIM	yA WA nahIM	yI WI nahIM	ye WA nahIM	yI WIM nahIM
+yA_WA_1	yA_WA_1	yA WA	yI WI	ye We	yI WI	ye We	yI WI	ye We	yI WI	yA WA	yI WI	ye WI	yI WIM nahIM
+yA_WA_2	yA_WA_2	yA WA	yI WI	ye We	yI WI	ye We	yI WI	ye We	yI WI	yA WA	yI WI	ye WI	yI WIM nahIM
+state_copula-past	0_WA_1	WA	WI	We	WIM	WeM	WI	We	WIM	WA	WI	We	WI
+0_1	0_1												
+o_1	o_1	o	o	o	o	o	o	o	o	o	o	o	o
+ie_1	ie_1	ie											
+iegA_1	iegA_1	iegA	iegI	iege	iegI	iege	iegI						
+0_cukA_WA_1	0_cukA_WA_1	cukA WA	cukI WI	cuke We	cukI WI	cuke We	cukI WI 	cuke We	cukI WIM	cukA WA	cukI WI	cuke We	cukI WI
+0_cukA_hogA_1	0_cukA_hogA_1	cukA hogA	cukI hogI	cuke hoge	cukI hoMgI	cuke hoge	cukI hogI	cuke hoge	cukI hogI	cukA hogA	cukI hogI	cuke hoge	cukI hogI
+0_sakA_1	0_sakA_1	sakA	sakI	sake	sakIM	sake	sakIM	sakeM	sakIM	sakA	sakI	sake	sakIM
+0_rahA_hogA_1	0_rahA_hogA_1	rahA hogA	rahI hogI	rahe hoge	rahIM hogI	rahe hoge	rahIM hogI	rahe hoge	rahIM hogI	rahA hogA	rahI hogI	rahe hoge	rahIM hogI
+0_rahA_hogA_2	0_rahA_hogA_2	rahA hogA	rahI hogI	rahe hoge	rahIM hogI	rahe hoge	rahIM hogI	rahe hoge	rahIM hogI	rahA hogA	rahI hogI	rahe hoge	rahIM hogI
+nA_hE_1	nA_hE_1	nA hE	nI hE	ne hE	nI hE	ne hE	nI hE	ne hE	nI hE	nA hE	nI hE	ne hE	nI hE
+0_cukA_hE_1	0_cukA_hE_1	cukA hE	cukI hE	cukI hEM	cuke hoge	cukI hoMgI	cuke hoge	cukI hogI	cuke hoMge	cukI hoMgI	cukA hE	cukI hE	cuke hoMge	cukI hoMgI
+0_liyA_hE_1	0_liyA_hE_1	liyA hE	liyA hE	liye hoMge	liye hoMgI	liye hoge	liye hogI						
+yA_hogA_1	yA_hogA_1	yA hogA	yI hogI	ye hogeM	yI hoMgI							ye hoge	yI hoMgI
+yA_hogA_2	yA_hogA_2	yA hogA	yI hogI	ye hoge	yI hoMgI							ye hoge	yI hoMgI
+nA_se_pahale_1	nA_se_pahale_1	nA se pahale 1	nA se pahale 1	nA se pahale 1	nA se pahale 1	nA se pahale 1	nA se pahale 1	nA se pahale 1	nA se pahale 1	nA se pahale 1	nA se pahale 1	nA se pahale 1	nA se pahale 1
+ne_ke_bAxa_1	ne_ke_bAxa_1	ne ke bAxa 1	ne ke bAxa 1	ne ke bAxa 1	ne ke bAxa 1	ne ke bAxa 1	ne ke bAxa 1	ne ke bAxa 1	ne ke bAxa 1	ne ke bAxa 1	ne ke bAxa 1	ne ke bAxa 1	ne ke bAxa 1
+0_xiyA_1	0_xiyA_1	xiyA	xiyA	xiyeM	xiyeM	xiye	xiye	xiyeM	xiyeM	xiyA	xiyA	xiyeM	xiyeM
+0_legA_1	0_legA_1	legA	legI	leMge	leMgI	leMge	leMgI	leMge	leMgI	legA	legI	leMge	leMgI
+nA_cAhie_1	nA_cAhie_1	nA cAhie	nI cAhie	nA cAhie	nI cAhie	nA cAhie	nI cAhie	nA cAhie	nI cAhie	nA cAhie	nI cAhie	nA cAhie	nI cAhie
+0_liyA_WA_1	0_liyA_WA_1	liyA WA	lI WI	liye We	lI WI	liye We	lI WI						
